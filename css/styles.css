@@ -1,3 +1,4 @@
+/* #region base_style */
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -31,7 +32,9 @@ img {
   display: block;
   max-width: 100%;
 }
+/* #endregion */
 
+/* #region component_style */
 .section {
   padding: 120px 0;
 }
@@ -40,8 +43,9 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 }
+/* #endregion */
 
-/* header */
+/* #region header */
 .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -117,8 +121,9 @@ img {
 .contacts-item:hover {
   color: #404bbf;
 }
+/* #endregion */
 
-/* ------------- Main -------------- */
+/* #region hero */
 .hero-section {
   margin: 0 auto;
   max-width: 1440px;
@@ -168,8 +173,9 @@ img {
 .button:focus {
   background-color: #404bbf;
 }
+/* #endregion */
 
-/* section-2 */
+/* #region company*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -205,8 +211,9 @@ img {
   margin-bottom: 8px;
   border: 1px solid #8e8f99;
 }
+/* #endregion */
 
-/* section-3 */
+/* #region team */
 .team-section {
   background-color: #f4f4fd;
 }
@@ -279,9 +286,9 @@ img {
 .team-icon {
   fill: #f4f4fd;
 }
+/* #endregion */
 
-/* section-4 */
-
+/* #region portfolio */
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -343,10 +350,11 @@ img {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+/* #endregion portfolio */
 
-/* footer */
+/* #region footer */
 
-.footer-page {
+.footer {
   background-color: #2e2f42;
 }
 .footer-container {
@@ -377,15 +385,15 @@ img {
   color: #f4f4fd;
   max-width: 264px;
 }
-.footer-contacts {
+.footer-socials {
   margin-right: 80px;
 }
-.footer-contacts-title {
+.footer-socials-title {
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 16px;
 }
-.footer-contacts-list {
+.footer-socials-list {
   display: flex;
   gap: 16px;
   align-items: flex-start;
@@ -393,11 +401,11 @@ img {
   flex-direction: row;
 }
 
-.footer-contacts-item {
+.footer-socials-item {
   width: 40px;
   height: 40px;
 }
-.footer-icon-link {
+.footer-socials-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,8 +415,8 @@ img {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icon-link:hover,
-.footer-icon-link:focus {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
   background-color: #31d0aa;
 }
 .footer-icon {
@@ -472,10 +480,11 @@ img {
   fill: #fff;
   margin-left: 16px;
 }
+/* #endregion */
 
-/* Modal-window  */
-
+/* #region modal_window  */
 .modal-overlay {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -484,14 +493,12 @@ img {
   left: 0px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
   pointer-events: none;
 }
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
 }
-
 .modal-wrapper {
   display: flex;
   flex-direction: column;
@@ -509,7 +516,6 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
-
 .modal-btn-close {
   position: absolute;
   top: 24px;
@@ -535,7 +541,6 @@ img {
   background-color: #404bbf;
   border: none;
 }
-
 .modal-icon {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -560,7 +565,6 @@ img {
 .input-wrapper {
   margin-bottom: 8px;
 }
-
 .input-label {
   font-size: 12px;
   line-height: 1.17;
@@ -585,7 +589,6 @@ img {
 .input-field:focus {
   border-color: #4d5ae5;
 }
-
 .input-icon {
   position: absolute;
   left: 16px;
@@ -617,7 +620,6 @@ img {
 .textarea-field:focus {
   border-color: #4d5ae5;
 }
-
 .modal-checkbox {
   margin-bottom: 24px;
 }
@@ -640,13 +642,11 @@ img {
   justify-content: center;
   fill: transparent;
 }
-
 #user-privacy:checked + .checkbox-label .checkbox-icon-wrapper {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
-
 .checkbox-link {
   line-height: 1.33333;
   text-decoration: underline;
@@ -654,7 +654,6 @@ img {
   color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-btn {
   display: block;
   margin: 0 95px;
@@ -670,14 +669,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
 }
-
 .modal-btn-close:hover,
 .modal-btn-close:focus {
   background-color: #404bbf;
 }
+/* #endregion */
 
-/* Media */
-@media screen and (max-width: 1158px) {
-  .container {
-  }
-}
+/* #region Media */
+
+/* #endregion */
